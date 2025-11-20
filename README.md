@@ -1,22 +1,47 @@
 Epidemic Spread Simulation (Interactive SIR Model)
 =================================================
 
-Run an interactive simulation of an SIR epidemic with moving agents.
-Sliders let you change population size, infection probability, recovery time,
-vaccination rate, and movement speed. A lockdown checkbox reduces movement speed.
-The program shows an animated scatter of agents and a live S/I/R plot.
+This simulation uses agent-based modeling rather than purely mathematical differential equations. Each individual in the system is represented as a moving dot within a bounded environment. As individuals move and interact, infections occur based on distance and probability, and recovery happens after a specified time. The evolving counts of susceptible, infected, and recovered individuals are plotted in real time, offering a clear visual understanding of epidemic progression.
 
-Requirements:
-  - Python 3.8+ (3.10 or 3.11 recommended)
-  - Install dependencies in a venv:
-      python -m venv .venv
-      source .venv/bin/activate   # or .venv\Scripts\activate on Windows
-      pip install -r requirements.txt
+🎯 Key Features
 
-Run:
-  python src/main.py
+Agent-Based SIR Simulation
+Individuals move freely; infections spread through proximity-based interactions.
 
-Files:
-  src/simulation.py  - core SIR simulation & agent model
-  src/visualize.py   - interactive matplotlib UI (sliders/buttons)
-  src/main.py        - launches the interactive UI
+Real-Time Visualization
+Live animation of the environment and an updating infection curve graph.
+
+Intervention Controls
+
+Vaccination: Start simulation with pre-immune individuals
+
+Lockdown: Restrict movement to reduce infection spread
+
+Adjustable parameters for infection probability, recovery time, population size, etc.
+
+Self-Generated Data
+No external datasets required; the system simulates all activity internally.
+
+🧠 Purpose
+
+The project was developed as part of the Simulation and Modelling (UCS751) course to make epidemiological concepts more intuitive. It bridges the gap between theoretical epidemic models and real-world behaviors by providing a visual, interactive environment for experimentation.
+
+This tool is ideal for:
+
+Students learning epidemiology or simulation
+
+Educators demonstrating epidemic dynamics
+
+Researchers conducting conceptual experiments
+
+Anyone interested in understanding disease spread visually
+
+🔮 Future Enhancements
+
+SEIR model integration
+
+Network-based contact structure
+
+GUI for real-time parameter control
+
+Real-world dataset integration
